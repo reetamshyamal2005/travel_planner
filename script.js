@@ -265,6 +265,7 @@ resetBtn.addEventListener('click', () => {
   maxSel.textContent = '0';
   maxScenesHelp.textContent = '0';
   sceneSummary.innerHTML = '';
+  placeLabel.textContent = '—';
 
   // ✅ Clear side scenes list UI
   sceneList.innerHTML = `<div style="color:var(--muted);font-size:14px">Please select a destination first.</div>`;
