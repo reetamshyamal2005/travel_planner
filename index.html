@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Travel Planner – Modern, Responsive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">✈️</div>
+        <div>Indian Travel Planner</div>
+      </div>
+      <div class="pill">Responsive • Aesthetic • Modern</div>
+    </div>
+  </header>
+
+  <main class="container grid" id="app">
+    <!-- LEFT: Controls -->
+    <section class="card">
+      <div class="card-body">
+        <div class="section-title">Plan your trip</div>
+
+        <div class="chips" id="categoryChips" role="tablist" aria-label="Category">
+          <button class="chip" role="tab" aria-pressed="false" data-value="Mountain">🏔️ Mountain</button>
+          <button class="chip" role="tab" aria-pressed="false" data-value="State">🏛️ State</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row two">
+          <div>
+            <label class="lbl">📍 Choose Destination</label>
+            <div class="chips" id="destinationChips"></div>
+          </div>
+          <div>
+            <label class="lbl">📅 Arrival Date</label>
+            <input type="date" class="input" id="arrival" />
+          </div>
+        </div>
+
+        <div class="row two" style="margin-top:10px">
+          <div>
+            <label class="lbl">👥 Number of People</label>
+            <input type="number" min="0" class="input" id="people" />
+            <div class="help">Per-day accommodation & food multiply with people</div>
+          </div>
+          <div>
+            <label class="lbl">🗓️ Package Duration (days)</label>
+            <div class="chips">
+              <button class="chip" data-days="5" aria-pressed="false">5</button>
+              <button class="chip" data-days="7" aria-pressed="false">7</button>
+              <button class="chip" data-days="10" aria-pressed="false">10</button>
+            </div>
+            <div class="help">Select up to <span id="maxScenesHelp">5</span> side scenes</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div>
+          <div class="section-title" style="margin-bottom:6px">Side Scenes</div>
+          <div class="muted-row" style="margin-bottom:10px">
+            <div>Pick places near <span id="placeLabel">—</span></div>
+            <div><span id="selCount">0</span>/<span id="maxSel">5</span> selected</div>
+          </div>
+          <div class="scene-list" id="sceneList"></div>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn" id="clearBtn">🧹 Clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Summary -->
+    <aside class="card">
+      <div class="card-body">
+        <div class="section-title">Trip Summary</div>
+        <div class="muted-row"><span>Category</span><span id="sumCategory">—</span></div>
+        <div class="muted-row"><span>Destination</span><span id="sumPlace">—</span></div>
+        <div class="muted-row"><span>Arrival</span><span id="sumArrival">—</span></div>
+        <div class="muted-row"><span>Days</span><span id="sumDays">_</span></div>
+        <div class="muted-row"><span>People</span><span id="sumPeople">_</span></div>
+
+        <div class="divider"></div>
+        <div class="section-title" style="font-size:16px">Selected Side Scenes</div>
+        <div id="sceneSummary" class="row"></div>
+
+        <div class="divider"></div>
+        <div class="section-title" style="font-size:16px">Cost Breakdown</div>
+        <div class="muted-row"><span>Travel (₹5/km)</span><span id="costTravel">₹0.00</span></div>
+        <div class="muted-row"><span>Accommodation</span><span id="costStay">₹0.00</span></div>
+        <div class="muted-row"><span>Food</span><span id="costFood">₹0.00</span></div>
+        <div class="divider"></div>
+        <div class="muted-row" style="font-weight:800; font-size:18px"><span>Total</span><span id="costTotal">₹0.00</span></div>
+
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+           <button class="btn ghost" id="resetBtn">🔄 Reset</button>
+          <button class="btn ghost" id="printBtn">🖨️ Print / PDF</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>Crafted with ❤ • No frameworks • Single-file HTML/CSS/JS</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
