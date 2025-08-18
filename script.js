@@ -111,7 +111,6 @@ const costStay = el('costStay');
 const costFood = el('costFood');
 const costTotal = el('costTotal');
 const clearBtn = el('clearBtn');
-const saveBtn = el('saveBtn');
 const printBtn = el('printBtn');
 const resetBtn = el('resetBtn');
 const inr = (x) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(x || 0);
@@ -333,7 +332,6 @@ printBtn.addEventListener('click', () => {
   w.print();
 });
 
-saveBtn.addEventListener('click', ()=>{
   const data = {
     arrival: state.arrival,
     category: state.category,
@@ -352,7 +350,6 @@ saveBtn.addEventListener('click', ()=>{
   const a = document.createElement('a');
   a.href = url; a.download = 'itinerary.json'; a.click();
   URL.revokeObjectURL(url);
-});
 
 // ---- Boot ----
 try{
