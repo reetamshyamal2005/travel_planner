@@ -309,7 +309,7 @@ printBtn.addEventListener('click', () => {
     <p><strong>Total:</strong> ${costTotal.textContent}</p>
   `;
 
-  // ✅ Open a new print window
+
   const w = window.open('', '_blank', 'width=800,height=600');
   w.document.write(`
     <html>
