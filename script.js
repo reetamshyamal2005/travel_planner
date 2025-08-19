@@ -2,7 +2,7 @@
 const DATA = {
   Mountain: {
     Kashmir: [
-      { name: "Srinagar", distance: 0 },
+      { name: "Srinagar", distance: 5 },
       { name: "Dal Lake", distance: 10 },
       { name: "Mughal Gardens", distance: 15 },
       { name: "Gulmarg", distance: 50 },
@@ -21,7 +21,7 @@ const DATA = {
       { name: "Tashi Viewpoint", distance: 8 },
       { name: "Hanuman Tok", distance: 15 },
       { name: "Ganesh Tok", distance: 7 },
-      { name: "Enchey Monastery", distance: 3 },
+      { name: "Enchey Monastery", distance: 5 },
       { name: "Do Drul Chorten Stupa", distance: 8 },
       { name: "Banjhakri Falls & Energy Park", distance: 10 },
       { name: "Namgyal Institute of Tibetology", distance: 11 },
@@ -44,9 +44,9 @@ const DATA = {
   State: {
     Jaipur: [
       { name: "Amber Fort", distance: 7 },
-      { name: "Hawa Mahal", distance: 1 },
-      { name: "Jantar Mantar", distance: 1 },
-      { name: "City Palace (Jaipur)", distance: 1 },
+      { name: "Hawa Mahal", distance: 5 },
+      { name: "Jantar Mantar", distance: 9 },
+      { name: "City Palace (Jaipur)", distance: 12 },
       { name: "Bhangarh Fort", distance: 83 },
       { name: "Sheesh Mahal (Jaipur)", distance: 10 },
       { name: "Mehrangarh Fort (Jodhpur)", distance: 335 },
@@ -55,7 +55,7 @@ const DATA = {
       { name: "Chittorgarh Fort", distance: 310 },
     ],
     "Tamil Nadu": [
-      { name: "Marina Beach (Chennai)", distance: 0 },
+      { name: "Marina Beach (Chennai)", distance: 5 },
       { name: "Kapaleeshwarar Temple (Chennai)", distance: 5 },
       { name: "Brihadeeswarar Temple (Thanjavur)", distance: 350 },
       { name: "Meenakshi Amman Temple (Madurai)", distance: 460 },
@@ -281,7 +281,7 @@ resetBtn.addEventListener('click', () => {
 
   // ✅ Clear duration chips
   durationChips.forEach(chip => chip.setAttribute('aria-pressed', 'false'));
-  
+
   // ✅ Clear category chips (unselect all)
   categoryChips.forEach(chip => chip.setAttribute('aria-pressed', 'false'));
 
